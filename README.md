@@ -1,2 +1,2 @@
 # spring-boot-masterclass-project
-These are the files related to the springboot master class project from amigoscode.com
+These are my files code along files related to the springboot master class project from amigoscode.com
