@@ -1,4 +1,4 @@
-package customer;
+package com.balun.springboot.masterclass.customer;
 
 public class Customer {
     private final Long id;
@@ -10,12 +10,10 @@ public class Customer {
     }
 
     public Long getId() {
-
         return id;
     }
 
     public String getName() {
-
         return name;
     }
 }
