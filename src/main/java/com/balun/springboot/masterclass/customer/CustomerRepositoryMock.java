@@ -1,11 +1,12 @@
 package com.balun.springboot.masterclass.customer;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
 
-@Component(value = "mock")
+@Repository(value = "mock")
 public class CustomerRepositoryMock implements CustomerRepository {
     @Override
     public List<Customer> getCustomers(){
@@ -14,7 +15,7 @@ public class CustomerRepositoryMock implements CustomerRepository {
             new Customer(2L, "Eddie Dean"),
             new Customer(3L, "Jake Chambers"),
             new Customer(4L, "Susannah Dean"),
-            new Customer(4L, "Oy")
+            new Customer(5L, "Oy")
 
         );
     }
