@@ -15,7 +15,7 @@ public class CustomerRepositoryMock implements CustomerRepository {
             new Customer(2L, "Eddie Dean"),
             new Customer(3L, "Jake Chambers"),
             new Customer(4L, "Susannah Dean"),
-            new Customer(4L, "Oy")
+            new Customer(5L, "Oy")
 
         );
     }
