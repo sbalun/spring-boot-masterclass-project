@@ -1,5 +1,8 @@
 package com.balun.springboot.masterclass.customer;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Customer {
     private final Long id;
     private final String name;
@@ -11,10 +14,12 @@ public class Customer {
         this.password = password;
     }
 
+    @JsonIgnore
     public String getPassword() {
         return password;
     }
 
+    @JsonProperty("customerId")
     public Long getId() {
         return id;
     }
