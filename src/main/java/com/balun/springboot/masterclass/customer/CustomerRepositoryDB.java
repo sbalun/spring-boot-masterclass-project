@@ -14,7 +14,7 @@ public class CustomerRepositoryDB implements CustomerRepository {
     public List<Customer> getCustomers(){
         //TODO connect to live db
         return Collections.singletonList(
-                new Customer(1L, "TODO.  Implement real DB")
+                new Customer(1L, "TODO.  Implement real DB", "blahblah")
         );
     }
 }
