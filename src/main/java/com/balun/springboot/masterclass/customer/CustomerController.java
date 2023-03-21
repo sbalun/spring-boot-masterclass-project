@@ -20,12 +20,12 @@ public class CustomerController {
         return customerService.getCustomer();
     }
 
-    @PostMapping
+    @PostMapping("/")
     void createNewCustomer(@RequestBody Customer customer){
         System.out.println("POST Request: " + customer);
     }
 
-    @PutMapping
+    @PutMapping("/")
     void updateCustomer(@RequestBody Customer customer){
         System.out.println("UPDATE Request: " + customer);
     }
