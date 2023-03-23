@@ -8,13 +8,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CustomerConfiguration {
 
-    @Value("${app.useFakeCustomerRepo:false}")
+    @Value("${app.useFakeCustomerRepo:false}") // you can override this setting in the runner config
     private Boolean useFakeCustomerRepo;
 
     @Bean
     CommandLineRunner commandLineRunner() {
         return args -> {
-            System.out.println("Command line runner hooray");
+            System.out.println("Veni, vidi, vici");
         };
     }
 
