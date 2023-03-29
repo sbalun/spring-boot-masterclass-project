@@ -3,7 +3,7 @@
     <option name="ALTERNATIVE_JRE_PATH" value="corretto-18" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <module name="spring-boot-mc" />
-    <option name="PROGRAM_PARAMETERS" value="--app.useFakeCustomerRepo=false" />
+    <option name="PROGRAM_PARAMETERS" value="--app.useFakeCustomerRepo=true" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.balun.springboot.masterclass.SpringBootMasterclassApplication" />
     <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
       <option name="credential" />
