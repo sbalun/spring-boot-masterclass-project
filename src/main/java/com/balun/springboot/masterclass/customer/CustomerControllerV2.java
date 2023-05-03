@@ -1,44 +1,51 @@
 package com.balun.springboot.masterclass.customer;
 
+import com.balun.springboot.masterclass.exception.ApiRequestException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Collections;
 import java.util.List;
 
-@RequestMapping("api/v2/customers")
+@RequestMapping(path = "api/v2/customers")
 @RestController
 public class CustomerControllerV2 {
 
     private final CustomerService customerService;
 
     @Autowired
-    public CustomerControllerV2(CustomerService customerService){
+    public CustomerControllerV2(CustomerService customerService) {
         this.customerService = customerService;
     }
 
     @GetMapping
-    List<Customer>getCustomers(){
+    List<Customer> getCustomers() {
         return customerService.getCustomers();
     }
-    @GetMapping(path="{customerId}")
-    Customer getCustomer(@PathVariable("customerId")Long id){
+
+    @GetMapping(path = "{customerId}")
+    Customer getCustomer(@PathVariable("customerId") Long id) {
         return customerService.getCustomer(id);
     }
-    @PostMapping()
-    void createNewCustomer(@Valid @RequestBody Customer customer){
-        System.out.println("POST Request: " + customer);
+
+    @GetMapping(path = "{customerId}/exception")
+    Customer getCustomerException(@PathVariable("customerId") Long id) {
+        throw new ApiRequestException("ApiRequestException for customer " + id);
     }
 
-    @PutMapping("/")
-    void updateCustomer(@RequestBody Customer customer){
-        System.out.println("PUT Request: " + customer);
+    @PostMapping
+    void createNewCustomer(@Valid @RequestBody Customer customer) {
+        System.out.println("POST REQUEST...");
+        System.out.println(customer);
     }
 
-    @DeleteMapping(path="{customerId}")
-    void deleteCustomer(@PathVariable("customerId") Long id){
-        System.out.println("DELETE Request for id: " + id);
+    @PutMapping
+    void updateCustomer(@RequestBody Customer customer) {
+        System.out.println("UPDATE REQUEST...");
+        System.out.println(customer);
+    }
+
+    @DeleteMapping(path = "{customerId}")
+    void deleteCustomer(@PathVariable("customerId") Long id) {
+        System.out.println("DELETE REQUEST FOR CUSTOMER WITH ID " + id);
     }
 }
-
