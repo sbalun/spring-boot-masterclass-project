@@ -2,10 +2,17 @@ package com.balun.springboot.masterclass.customer;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
+
+@Entity
+@Table
 public class Customer {
+    @Id
     private final Long id;
     @NotBlank(message = "name must not be empty")
     private final String name;

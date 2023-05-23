@@ -18,7 +18,7 @@ public class CustomerService {
     }
 
     List<Customer> getCustomers(){
-        return customerRepository.getCustomers();
+        return customerRepository.findAll();
     }
 
     Customer getCustomer(Long id) {

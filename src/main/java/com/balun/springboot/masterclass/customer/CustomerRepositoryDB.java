@@ -2,7 +2,7 @@ package com.balun.springboot.masterclass.customer;
 import java.util.Collections;
 import java.util.List;
 
-public class CustomerRepositoryDB implements CustomerRepository {
+public class CustomerRepositoryDB implements CustomerRepo {
     @Override
     public List<Customer> getCustomers(){
         //TODO connect to live db

@@ -1,5 +1,8 @@
 package com.balun.springboot.masterclass.customer;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
 // Java Abstract reminder...
@@ -10,6 +13,7 @@ import java.util.List;
 // - You cannot create objects of interfaces.
 // - To use an interface but some other classes must implement it.
 
-public interface CustomerRepository {
-        List<Customer> getCustomers();
+@Repository
+public interface CustomerRepository
+        extends JpaRepository<Customer, Long> {
 }
