@@ -3,8 +3,6 @@ package com.balun.springboot.masterclass.customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 // Java Abstract reminder...
 // The abstract class in Java cannot be instantiated (we cannot create objects of abstract classes).
 
