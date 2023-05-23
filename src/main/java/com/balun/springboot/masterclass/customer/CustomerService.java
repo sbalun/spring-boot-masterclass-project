@@ -1,5 +1,6 @@
 package com.balun.springboot.masterclass.customer;
 
+import com.balun.springboot.masterclass.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,6 @@ public class CustomerService {
         return getCustomers().stream()
                 .filter(customer -> customer.getId().equals(id))
                 .findFirst()
-                .orElseThrow(() -> new IllegalStateException("customer not found"));
+                .orElseThrow(() -> new NotFoundException("Customer with id " + id + " not found"));
     }
 }
